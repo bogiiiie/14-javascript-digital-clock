@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Digital Clock | Real-Time Local Time Display | Stephen De Jesus</title>
+  <meta name="description"
+    content="A modern digital clock displaying real-time local time with AM/PM format, date, and theme toggle. Created by Stephen William G. De Jesus." />
+  <meta name="keywords"
+    content="Digital Clock, Real-Time Clock, JavaScript Clock, Local Time, Live Time Display, Stephen William G. De Jesus" />
+  <meta name="author" content="Stephen William G. De Jesus" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Digital Clock | Real-Time Local Time Display" />
+  <meta property="og:description"
+    content="A live digital clock showing local time with AM/PM, date, and a clean interface. Built by Stephen De Jesus." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/digital-clock" />
+  <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <style>
+
+  </style>
+</head>
+
+<body
+  class="app bg-gradient-to-tl from-indigo-900 to-blue-800 min-h-screen flex flex-col items-center justify-between text-gray-100">
+
+  <!-- Main Clock Section -->
+  <main class="clock flex flex-col flex-1 items-center justify-center w-full gap-8 font-mono p-5">
+
+    <section id="clock" class="clock__card bg-black/30 ring ring-gray-600/50 shadow-2xl flex flex-col justify-center items-center w-full max-w-[560px] rounded-3xl px-9 py-11 gap-5 text-center" aria-labelledby="clock-title">
+      <h1 id="clock-title" class="sr-only">Current Local Time</h1>
+
+      <time id="time" class="clock__time text-white font-bold text-8xl break-all" aria-label="Current time"></time>
+      <p id="meridiem" class="clock__meridiem text-2xl font-medium text-blue-300" aria-label="AM or PM"></p>
+      <p id="date" class="clock__date text-xl text-gray-300" aria-label="Current date"></p>
+
+      <p id="clock-location" class="clock__location text-lg text-purple-300 flex items-center gap-3">
+        <i class="bi bi-globe2" aria-hidden="true"></i>
+        <span>Local Time</span>
+      </p>
+    </section>
+
+    <!-- Clock Controls -->
+    <div class="clock__controls font-mono flex flex-wrap items-center justify-center gap-5">
+      <button id="toggle-format" class="clock__button text-white flex items-center gap-3 bg-white/10 ring ring-gray-300/40 px-5 py-3 rounded-lg hover:ring-2 hover:ring-white/80 active:ring-2 active:ring-white/80 active:scale-95 cursor-pointer" aria-label="Toggle 24 hour time format">
+        <i class="bi bi-clock-fill" aria-hidden="true"></i>
+        <span>24H Format</span>
+      </button>
+      <button id="toggle-theme" class="clock__button text-white flex items-center gap-3 bg-white/10 ring ring-gray-300/40 px-5 py-3 rounded-lg hover:ring-2 hover:ring-white/80 active:ring-2 active:ring-white/80 active:scale-95 cursor-pointer" aria-label="Toggle color theme">
+        <i class="bi bi-palette-fill" aria-hidden="true"></i>
+        <span>Theme</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer flex items-center justify-center w-screen text-center text-white bg-black/70 p-5">
+    <div class="footer__wrapper w-full max-w-[1024px] flex justify-between items-center max-sm:flex-col gap-2">
+
+      <p class="footer__copyright text-sm">
+        &copy; <time id="year"></time> All rights reserved. Created by
+        <a class="footer__link underline hover:text-blue-300" href="https://www.facebook.com/stephenwilliam.dejesus.5/" target="_blank" rel="noopener noreferrer">
+          Stephen William G. De Jesus
+        </a>
+      </p>
+
+      <nav class="footer__nav" aria-label="Social media">
+        <ul class="footer__socials flex items-center justify-center gap-4 text-lg">
+          <li>
+            <a href="https://github.com/bogiiiie" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300">
+              <i class="bi bi-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/stephenwilliam.dejesus.5/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/stephenwilliamdejesus/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
